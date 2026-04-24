@@ -76,7 +76,7 @@ docker compose up --build
 
 ## License
 
-GNU GPL
+GNU GPL v3.0 License. See [LICENSE](LICENSE) for details.
 
 ---
 
