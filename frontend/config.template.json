@@ -1,0 +1,28 @@
+{
+  "forced_lang": "${FORCED_LANG}",
+  "recaptchaSiteKey": "${RECAPTCHA_SITE_KEY}",
+  "vars": {
+    "ORGANIZATION_NAME": "${ORGANIZATION_NAME}",
+    "TEAM_NAME": "${TEAM_NAME}",
+    "APP_NAME": "${APP_NAME}",
+    "STARTING_DATE": "${STARTING_DATE}",
+    "LOGO_HEADER": "${LOGO_HEADER}",
+    "META_DESCRIPTION": "${META_DESCRIPTION}"
+  },
+  "api": {
+    "localUrl": "${API_LOCAL_URL}",
+    "prodUrl": "${API_PROD_URL}"
+  },
+  "logos": {
+    "favicon": "${LOGO_FAVICON}",
+    "header_logo": "${LOGO_HEADER}",
+    "bottom_left_logo": "${LOGO_BOTTOM_LEFT}",
+    "bottom_right_logo": "${LOGO_BOTTOM_RIGHT}"
+  },
+  "links": {
+    "bottom_left": "${LINK_BOTTOM_LEFT}",
+    "bottom_center_left": "${LINK_BOTTOM_CENTER_LEFT}",
+    "bottom_center_right": "${LINK_BOTTOM_CENTER_RIGHT}",
+    "bottom_right": "${LINK_BOTTOM_RIGHT}"
+  }
+}

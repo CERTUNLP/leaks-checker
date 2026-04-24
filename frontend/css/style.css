@@ -1,0 +1,641 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #f4f6fb;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #222;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes fadein {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+h1 {
+  margin-bottom: 28px;
+  font-size: 2.2em;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: #2a3a4a;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 28px;
+  align-items: stretch;
+}
+input[type="text"] {
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #dbe2ef;
+  font-size: 1.1em;
+  outline: none;
+  background: #f4f6fb;
+  color: #222;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: box-shadow 0.3s, border 0.3s;
+}
+input[type="text"]:focus {
+  box-shadow: 0 4px 16px rgba(31,38,135,0.10);
+  border: 1.5px solid #3f72af;
+}
+button {
+  padding: 14px 28px;
+  border-radius: 10px;
+  border: none;
+  background: #3f72af;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1em;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(31,38,135,0.10);
+  transition: background 0.3s, transform 0.2s;
+}
+button:hover {
+  background: #112d4e;
+  transform: scale(1.05);
+}
+#results {
+  margin-top: 18px;
+  text-align: left;
+}
+.leak {
+  background: #f9fafc;
+  border-radius: 12px;
+  padding: 16px 18px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 12px rgba(31,38,135,0.08);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  animation: fadein 0.7s;
+}
+.leak-icon {
+  font-size: 1.7em;
+  margin-right: 8px;
+  color: #3f72af;
+}
+.leak-details {
+  flex: 1;
+}
+.leak strong {
+  color: #3f72af;
+  font-weight: 600;
+}
+.leak span {
+  font-family: monospace;
+  font-size: 1.1em;
+  color: #222;
+  background: #e3eafc;
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+.logo-title-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin-top: 38px;
+  margin-bottom: 32px;
+  position: relative;
+}
+.logo-title-wrap .logo {
+  max-width: 200px;
+  margin: 0 32px 0 0;
+  display: block;
+  filter: drop-shadow(0 2px 8px rgba(31,38,135,0.10));
+}
+.logo-title-wrap .tool-title-combo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* O center si quieres centrado */
+}
+
+.logo-title-wrap .tool-title-combo > span {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 7px;
+  font-size: 2.1em;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1.1;
+}
+
+.tool-title-desc {
+  font-size: 1em;
+  color: #3f72af;
+  margin-top: 6px;
+  font-weight: 400;
+  text-align: left;
+  letter-spacing: 0.01em;
+}
+.logo-title-wrap::before {
+  display: none;
+}
+.logo-title-divider {
+  width: 2px;
+  height: 80px;
+  background: #e3eafc;
+  margin: 0 22px;
+  border-radius: 2px;
+}
+@media (max-width: 700px) {
+  .logo-title-divider {
+    width: 80px;
+    height: 2px;
+    margin: 12px 0;
+  }
+  
+}
+.tool-title-main {
+  color: #00c6d7;
+  font-weight: 700;
+  font-size: 1em;
+  letter-spacing: 1px;
+  margin-right: 7px;
+}
+.tool-title-sub {
+  color: #3f72af;
+  font-weight: 400;
+  font-size: 1em;
+  letter-spacing: 0.5px;
+}
+.g-recaptcha {
+  align-self: center;
+  margin: 0 auto;
+  max-width: 304px;
+  min-width: 200px;
+}
+.info-section {
+  background: #f9fafc;
+  border-radius: 14px;
+  margin-top: 36px;
+  padding: 28px 22px 18px 22px;
+  box-shadow: 0 2px 12px rgba(31,38,135,0.06);
+  font-size: 1.08em;
+  color: #222;
+  text-align: justify;
+  hyphens: auto;
+}
+.info-section h2 {
+  color: #3f72af;
+  font-size: 1.25em;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+.info-section p {
+  margin-bottom: 22px;
+  line-height: 1.6;
+}
+.faq-item {
+  margin-bottom: 8px; /* Reducido para que no "salte" tanto */
+  border-left: 4px solid #3f72af;
+  border-radius: 8px;
+  background: #f4f6fb;
+  overflow: hidden; /* Evita que el contenido se salga durante la transición */
+  transition: all 0.3s ease; /* Transición suave para fondo y sombra */
+}
+
+.faq-item[open] {
+  box-shadow: 0 4px 12px rgba(31,38,135,0.12);
+  background: #e3eafc; /* Un blanco puro resalta mejor que el azul claro */
+}
+.faq-item summary {
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 1.05em;
+  color: #2a3a4a;
+  outline: none;
+  font-weight: 600;
+  /* Esto asegura que la flechita sea visible */
+  display: list-item; 
+  transition: color 0.2s ease;
+}
+
+/* Estilo de la flechita (el triángulo) */
+.faq-item summary::marker {
+  color: #3f72af; /* El azul de tu tema */
+  font-size: 1.1em;
+}
+
+/* Cambio de color al pasar el mouse */
+.faq-item summary:hover {
+  color: #3f72af;
+}
+
+/* Cuando está abierto, podemos resaltar el summary */
+.faq-item[open] summary {
+  color: #3f72af;
+  border-bottom: 1px solid #e3eafc;
+}
+
+/* Animación para que el texto no aparezca de golpe */
+.faq-item div {
+  padding: 16px;
+  margin: 0;
+  color: #222;
+  font-size: 0.98em;
+  line-height: 1.6;
+  text-align: justify;
+  hyphens: auto;
+  animation: fadeInDown 0.3s ease-out;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.info-section a {
+  color: #3f72af;
+  text-decoration: underline;
+}
+.info-section a:hover {
+  color: #112d4e;
+}
+.main-flex {
+  display: flex;
+  align-items: flex-start; /* Cada columna empieza arriba, no se afecta por el alto de la otra */
+  gap: 40px;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+  flex: 1 0 auto;
+}
+
+.info-section-large {
+  flex: 1;
+  /* NO uses min-height ni justify-content: center aquí */
+  display: block;
+}
+
+.container {
+  margin-top: 150px !important; 
+  flex: 0 0 420px;
+  max-width: 480px;
+  width: 100%;
+  margin: 0;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+  padding: 40px 32px 32px 32px;
+  text-align: center;
+  animation: fadein 1s;
+  display: block;
+}
+@media (max-width: 1100px) {
+  .main-flex {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 28px;
+  }
+  .container {
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+  .info-section-large {
+    margin: 0;
+    padding: 24px 12px;
+  }
+}
+@media (max-width: 700px) {
+  .logo-title-wrap {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 5px; /* Reducimos un poco el gap para que el texto no se separe tanto del logo */
+    margin-top: 18px;
+    margin-bottom: 18px;
+    padding: 0 15px; /* Más padding lateral para seguridad */
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .tool-title-combo {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra la descripción respecto al título */
+    text-align: center;
+    width: 100%;
+  }
+
+  /* ESTA ES LA PARTE CLAVE */
+  .logo-title-wrap .tool-title-combo > span {
+    display: flex;
+    flex-direction: row; /* Mantenemos UNLP y Leaks Checker en línea si hay espacio */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center;     /* Alinea verticalmente los dos textos */
+    flex-wrap: wrap;         /* Si el celular es muy chico, que bajen pero sigan centrados */
+    gap: 7px;
+    width: 100%;
+    font-size: 1.3em; /* Ajustamos el tamaño para que no desborde */
+  }
+
+  .tool-title-main, .tool-title-sub {
+    margin: 0 !important; /* Quitamos márgenes que puedan empujar el texto */
+    font-size: 1em !important; 
+  }
+
+  .tool-title-desc {
+    text-align: center;
+    width: 100%;
+    margin-top: 5px;
+    font-size: 0.9em !important;
+  }
+
+  .logo-title-wrap .logo {
+    margin: 15px 0 0 0 !important; /* Centrado total, solo espacio arriba */
+    max-width: 170px;
+  }
+
+  .logo-title-divider {
+    display: none;
+  }
+  
+}
+/* Responsive para dispositivos móviles */
+@media (max-width: 900px) {
+  .main-flex {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+    padding: 0 15px; /* Evita que toque los bordes físicos del celu */
+  }
+
+  .container {
+    flex: none; /* Quita el ancho fijo de 420px */
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto !important;
+    padding: 25px 20px;
+    box-sizing: border-box; /* Crucial para que el padding no sume ancho */
+  }
+
+  .info-section-large {
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+  }
+}
+
+.site-footer {
+  background: linear-gradient(90deg, #e3eafc 0%, #3f72af 100%);
+  color: #222;
+  text-align: center;
+  height: 120px; /* <-- AGREGADO */
+  padding: 0 10px;
+  font-size: 1.08em;
+  margin-top: 48px;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  box-shadow: 0 -2px 12px rgba(31,38,135,0.06);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.site-footer .footer-link {
+  color: #112d4e;
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.site-footer .footer-link:hover {
+  color: #00c6d7;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.form-note {
+  margin-top: 12px;
+  font-size: 0.98em;
+  color: #3f72af;
+  text-align: center;
+  opacity: 0.85;
+}
+.footer-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding: 0 32px; /* Más espacio a los costados */
+  box-sizing: border-box;
+}
+
+.footer-logo {
+  height: 90%;
+  max-height: 56px;
+  width: auto;
+  display: block;
+  margin: 0 18px; /* Espacio a los lados de cada logo */
+}
+
+.footer-center {
+  flex: 1;
+  text-align: center;
+  min-width: 0;
+  padding: 0 18px; /* Espacio interno para que el texto no toque los logos */
+  white-space: normal;
+  padding-top: 15px;
+}
+
+.footer-link {
+  color: #3f72af;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.footer-copy {
+  font-size: 0.95em;
+  color: #888;
+  margin-top: 15px;
+}
+
+@media (max-width: 1024px) {
+  .footer-flex {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px; /* Reducido un poco para que no sea tan largo */
+    padding: 20px 0;
+  }
+
+  #c-link-left {
+    order: 1;
+  }
+
+  #c-link-right {
+    order: 2;
+  }
+
+  .footer-center {
+    order: 3;
+  }
+  
+  .footer-logo {
+    margin: 5px 0; 
+    height: 45px;
+    max-height: 45px;
+  }
+
+  .footer-center {
+    display: flex;
+    flex-direction: column; /* Apila los links verticalmente */
+    align-items: center;
+    gap: 8px; /* Espacio entre el link de la web y el mail */
+    padding: 0 15px;
+    font-size: 0.95em;
+    word-break: break-all;
+    width: 100%;
+  }
+
+  .site-footer {
+    height: auto;
+    min-height: 140px; /* Un poco más de aire para el contenido apilado */
+    padding: 10px 0;
+  }
+
+  /* Ocultamos el separador vertical solo en móvil */
+  .footer-center span, 
+  .footer-divider { 
+    display: none; 
+  }
+}
+@media (max-width: 600px) {
+  .tool-title-combo > span {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 1.3em;
+    gap: 0;
+  }
+  .tool-title-desc {
+    font-size: 0.95em;
+  }
+}
+
+@media (max-width: 600px) {
+  .tool-title-combo {
+    font-size: 1.1em !important;
+  }
+  .tool-title-combo > span {
+    font-size: 1.1em !important;
+  }
+  .tool-title-main,
+  .tool-title-sub {
+    font-size: 1.1em !important;
+  }
+  .tool-title-desc {
+    font-size: 0.87em !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 20px 10px !important;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .g-recaptcha {
+    /* Centramos el contenedor */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    
+    /* Esta es la magia: escalamos el widget */
+    transform: scale(0.85); 
+    -webkit-transform: scale(0.85);
+    
+    /* Importante: ajustamos el origen de la transformación al centro */
+    transform-origin: center center;
+  }
+}
+
+/* Si el celular es MUY pequeño (pantallas de 320px como iPhone SE viejo) */
+@media (max-width: 350px) {
+  .g-recaptcha {
+    transform: scale(0.75);
+    -webkit-transform: scale(0.75);
+  }
+}
+@media (max-width: 600px) {
+  /* Achica el texto que el usuario escribe */
+  input[type="text"] {
+    font-size: 0.95em; 
+    padding: 12px;
+  }
+
+  /* Achica específicamente el texto de sugerencia (placeholder) */
+  input[type="text"]::placeholder {
+    font-size: 0.85em; /* Un poco más chico que el texto normal */
+  }
+}
+input[type="text"] {
+  padding: 14px 10px; /* Reducimos un poco el padding lateral (antes era 14px) */
+  font-size: 1rem;    /* Bajamos un poquito de 1.1em a 1rem (16px) */
+  width: 100%;
+  box-sizing: border-box; /* Esto es VITAL para que el padding no estire el input */
+}
+
+/* Ajuste específico para el placeholder */
+input[type="text"]::placeholder {
+  font-size: 0.9em; 
+  opacity: 0.7;
+}
+
+.footer-inner {
+  max-width: 1400px; /* Igual que .main-flex */
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.footer-logo.left {
+  max-height: 70px; 
+  height: 70px;
+}
+
+@media (max-width: 600px) {
+  .leak-warning {
+    padding: 10px 6px !important;
+    font-size: 0.98em !important;
+    word-break: break-word;
+    box-sizing: border-box;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    max-width: 100vw;
+  }
+}
+
+.plain-link {
+  color: inherit;
+  text-decoration: underline;
+  font: inherit;
+}

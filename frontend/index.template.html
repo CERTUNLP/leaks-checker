@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title id="t-meta-title">${APP_NAME} - ${ORGANIZATION_NAME}</title>
+  <meta id="t-meta-desc" name="description" content="${META_DESCRIPTION}" />
+  
+  <meta property="og:title" content="${APP_NAME} - ${ORGANIZATION_NAME}" />
+  <meta property="og:description" content="${META_DESCRIPTION}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="${LOGO_HEADER}" /> 
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="${APP_NAME} - ${ORGANIZATION_NAME}">
+  <meta name="twitter:description" content="${META_DESCRIPTION}">
+
+  <link id="c-favicon-32" rel="icon" href="${LOGO_FAVICON}" sizes="32x32" />
+  <link id="c-favicon-lg" rel="icon" href="${LOGO_FAVICON}" sizes="200x200" />
+  <link rel="apple-touch-icon" href="${LOGO_FAVICON}" />
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="logo-title-wrap">
+    <span class="tool-title-combo">
+      <span>
+        <span id="t-title-main" class="tool-title-main"></span>
+        <span id="t-title-sub" class="tool-title-sub"></span>
+      </span>
+      <div id="t-title-desc" class="tool-title-desc"></div>
+    </span>
+    <div class="logo-title-divider"></div>
+    <img id="c-logo-header" src="" alt="Header Logo" class="logo">
+  </div>
+  
+  <div class="main-flex">
+    <div class="info-section info-section-large">
+      <h2 id="t-whatis-title"></h2>
+      <p id="t-whatis-text"></p>
+      
+      <h2 id="t-faq-title"></h2>
+      <div id="faq-container" class="faq">
+        </div>
+    </div>
+    
+    <div class="container">
+      <h1 id="t-form-title"></h1>
+      <form id="leakForm">
+        <input type="text" id="query" placeholder="" required autocomplete="off">
+        <div id="recaptcha-container">
+          <div id="g-recaptcha-div" class="g-recaptcha"></div>
+        </div>
+        <button id="t-form-btn" type="submit"></button>
+      </form>
+      <div id="results"></div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-flex">
+        <a id="c-link-left" href="" target="_blank" rel="noopener">
+          <img id="c-logo-left" src="" alt="Footer Logo Left" class="footer-logo left" />
+        </a>
+        <div class="footer-center">
+          <a id="c-link-center-left" href="" target="_blank" class="footer-link"></a>
+          <span>&nbsp;|&nbsp;</span>
+          <a id="c-link-center-right" href="" class="footer-link"></a>
+          <div class="footer-copy">&copy; <script>document.write(new Date().getFullYear())</script> <a href='https://github.com/CERTUNLP/leaks-checker' target='_blank' class='plain-link'>Leaks Checker</a> by <a href='https://www.cert.unlp.edu.ar/' target='_blank' class='plain-link'>CERTUNLP</a></div>
+        </div>
+        <a id="c-link-right" href="" target="_blank" rel="noopener">
+          <img id="c-logo-right" src="" alt="Footer Logo Right" class="footer-logo right" />
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

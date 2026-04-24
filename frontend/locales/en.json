@@ -1,0 +1,68 @@
+{
+  "meta": {
+    "title": "{{APP_NAME}} - {{ORGANIZATION_NAME}}",
+    "description": "{{APP_NAME}} is a tool by {{TEAM_NAME}} to verify whether your {{ORGANIZATION_NAME}} data has been leaked on the Internet. It promotes digital self-care and the security of your credentials."
+  },
+  "header": {
+    "titleMain": "{{ORGANIZATION_NAME}}",
+    "titleSub": "{{APP_NAME}}",
+    "titleDesc": "Check whether your data has been leaked"
+  },
+  "info": {
+    "whatIsTitle": "What is {{APP_NAME}}?",
+    "whatIsText": "{{APP_NAME}} is a service by {{TEAM_NAME}} to verify whether an email address or username belonging to systems of {{ORGANIZATION_NAME}} has appeared in leaks published on Telegram or other sources on the Internet.<br><br>Through this development, we analyze the information and store it securely and confidentially. Our database is designed so that, even if a leak has not been confirmed, using this tool does not represent a risk to individuals.",
+    "faqTitle": "Frequently Asked Questions"
+  },
+  "faq": [
+    {
+      "q": "What is a data leak?",
+      "a": "A data leak occurs when information that is normally private—such as your email, name, or passwords—is exposed to unauthorized people. In simple terms, it means the data \"escaped\" from the secure environment where it should have been stored.<br>This usually happens mainly in two ways:<ul><li>Through the platforms we use: When a security incident or failure occurs in the systems of companies or internet services where we are registered.</li><li>Through our devices: When our information is exposed from our own phone or computer, often due to a simple mistake while browsing or unwanted programs installed without our knowledge.</li></ul>"
+    },
+    {
+      "q": "How do I use the tool?",
+      "a": "To use {{APP_NAME}}, simply enter your email address or username belonging to a {{ORGANIZATION_NAME}} system in the search field and complete the reCAPTCHA. Then click \"Check if I am exposed\" to verify whether your data has been leaked.<br> We also recommend using this tool periodically, at least once a month, since new leaks are added as they are detected."
+    },
+    {
+      "q": "What should I do if I find my username in a leak?",
+      "a": "If you identify that your data has been leaked, we recommend:<ol><li>Change leaked passwords.</li><li>Verify that the security details on your accounts have not been modified and enable two-step verification if it is not already active.</li><li>Check the devices you usually connect from for malware (malicious software), since in cases of \"info stealers\" (malware that steals information), credential theft occurs on the user's devices.</li><li>Do not save passwords in the browser.</li></ol>Remember that historical leaks may appear from systems where you have already changed your password, and in that case there is no need to worry."
+    },
+    {
+      "q": "What should I do if my username appears in a leak but I already changed the password?",
+      "a": "If you discover your username in a leak but had already changed your password for that service and your security settings are up to date, you do not need to do anything else at this time."
+    },
+    {
+      "q": "Does {{APP_NAME}} show all leaks of my data?",
+      "a": "{{APP_NAME}} only shows leaks belonging to systems of {{ORGANIZATION_NAME}} that {{TEAM_NAME}} has detected and analyzed since {{STARTING_DATE}}."
+    },
+    {
+      "q": "Does that mean my data was not leaked before?",
+      "a": "Not necessarily; there may be older leaks, undetected leaks, or leaks associated with systems that are outside our scope."
+    },
+    {
+      "q": "Where can I check previous leaks or leaks from other services?",
+      "a": "It is recommended to search on platforms such as <a href=\"https://haveibeenpwned.com/\" target=\"_blank\">Have I Been Pwned?</a> or <a href=\"https://monitor.firefox.com/\" target=\"_blank\">Mozilla Monitor</a>, which compile historical information globally.<br>Remember that historical leaks may appear from systems where you have already changed your password, and in that case there is no need to worry."
+    },
+    {
+      "q": "Does the tool replace other verification platforms?",
+      "a": "{{APP_NAME}} is a complementary tool. It is intended to inform and promote digital self-care with information collected by {{TEAM_NAME}}, therefore it does not replace other verification platforms."
+    }
+  ],
+  "form": {
+    "title": "Am I exposed?",
+    "placeholder": "Enter email or username from a {{ORGANIZATION_NAME}} system",
+    "button": "Check if I am exposed"
+  },
+  "results": {
+    "loading": "Searching...",
+    "captchaRequired": "Please complete the captcha to continue.",
+    "noLeaks": "No leaks were found for the entered user!",
+    "user": "User:",
+    "unknown": "Unknown",
+    "password": "Password:",
+    "detectedIn": "Detected in",
+    "site": "site",
+    "sites": "different sites",
+    "warningHTML": "⚠️ We recommend changing these passwords on all sites where you use them to a different one if you have not already done so. For more information, see <a href=\"#faq-filtracion\" style=\"color:#856404; text-decoration:underline;\">our recommendations</a>.",
+    "errorBackend": "Error querying the backend."
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "meta": {
+    "title": "{{APP_NAME}} - {{ORGANIZATION_NAME}}",
+    "description": "{{APP_NAME}} es una herramienta de {{TEAM_NAME}} para verificar si tus datos de {{ORGANIZATION_NAME}} han sido filtrados en Internet. Promueve el autocuidado digital y la seguridad de tus credenciales."
+  },
+  "header": {
+    "titleMain": "{{ORGANIZATION_NAME}}",
+    "titleSub": "{{APP_NAME}}",
+    "titleDesc": "Verificá si tus datos fueron filtrados"
+  },
+  "info": {
+    "whatIsTitle": "¿Qué es {{APP_NAME}}?",
+    "whatIsText": "{{APP_NAME}} es un servicio de {{TEAM_NAME}} para verificar si un email o usuario perteneciente a sistemas de {{ORGANIZATION_NAME}} ha aparecido en filtraciones publicadas en Telegram u otras fuentes en Internet.<br><br>Mediante este desarrollo analizamos la información y la almacenamos de forma segura y confidencial. Nuestra base de datos está diseñada para que, incluso en el caso de que no se haya corroborado una filtración, el uso de esta herramienta no represente un riesgo para las personas.",
+    "faqTitle": "Preguntas Frecuentes"
+  },
+  "faq": [
+    {
+      "q": "¿Qué es una filtración de datos?",
+      "a": "Una filtración de datos ocurre cuando información que normalmente es privada —como tu correo electrónico, nombre o contraseñas— queda expuesta a personas no autorizadas. En términos sencillos, significa que los datos se \"escaparon\" del entorno seguro donde debían estar guardados.<br>Esto suele suceder principalmente de dos maneras:<ul><li>A través de las plataformas que usamos: Cuando ocurre un incidente o fallo de seguridad en los sistemas de las empresas o servicios de internet en los que estamos registrados.</li><li>A través de nuestros dispositivos: Cuando nuestra información queda expuesta desde nuestro propio teléfono o computadora, muchas veces por un simple descuido al navegar o por programas no deseados que se instalan sin darnos cuenta.</li></ul>"
+    },
+    {
+      "q": "¿Cómo utilizo la herramienta?",
+      "a": "Para utilizar {{APP_NAME}}, simplemente ingresa tu dirección de correo electrónico o nombre de usuario, perteneciente a un sistema de {{ORGANIZATION_NAME}}, en el campo de búsqueda y completa el reCAPTCHA. Luego, haz clic en \"Comprobar si estoy expuesto\" para verificar si tus datos han sido filtrados.<br> También recomendamos usar esta herramienta periódicamente, al menos una vez al mes, ya que se van incorporando nuevas filtraciones a medida que se detectan."
+    },
+    {
+      "q": "¿Qué hago si encuentro mi usuario en una filtración?",
+      "a": "Si identificas que tus datos fueron filtrados, te recomendamos:<ol><li>Cambiar contraseñas filtradas</li><li>Verificar que los datos de seguridad en tus cuentas no hayan sido modificados y activar la verificación en dos pasos si no se encuentra activo.</li><li>Revisar los dispositivos desde los que te solés conectar en busca de malware (software malicioso), ya que en casos de \"info stealers\" (malware que roba información) los robos de credenciales se producen en los dispositivos del usuario.</li><li>No guardar las claves en el navegador. </li></ol>Recorda que pueden aparecer filtraciones históricas de sistemas donde ya hayas cambiado la contraseña y, en ese caso, no hay que preocuparse."
+    },
+    {
+      "q": "¿Qué hago si mi usuario aparece en una filtración pero ya cambié la contraseña?",
+      "a": "Si descubres tu usuario en una filtración pero ya habías cambiado tu contraseña en ese servicio y tenés tus opciones de seguridad al día, no necesitas hacer nada más en este momento."
+    },
+    {
+      "q": "¿{{APP_NAME}} muestra todas las filtraciones de mis datos?",
+      "a": "{{APP_NAME}} solo muestra filtraciones que pertenezcan a sistemas de {{ORGANIZATION_NAME}} que {{TEAM_NAME}} ha detectado y analizado desde {{STARTING_DATE}}."
+    },
+    {
+      "q": "¿Eso significa que mis datos no se filtraron antes?",
+      "a": "No necesariamente, pueden existir filtraciones más antiguas, no detectadas, o asociadas a sistemas que no estén dentro de nuestra competencia."
+    },
+    {
+      "q": "¿Dónde puedo revisar filtraciones anteriores o de otros servicios?",
+      "a": "Se recomienda la búsqueda en plataformas como <a href=\"https://haveibeenpwned.com/\" target=\"_blank\">Have I Been Pwned?</a> o <a href=\"https://monitor.firefox.com/\" target=\"_blank\">Mozilla Monitor</a>, que recopilan información histórica a nivel global.<br>Recorda que pueden aparecer filtraciones históricas de sistemas donde ya hayas cambiado la contraseña y, en ese caso, no hay que preocuparse."
+    },
+    {
+      "q": "¿La herramienta reemplaza otras plataformas de verificación?",
+      "a": "{{APP_NAME}} es una herramienta complementaria. Está orientada a informar y promover el autocuidado digital con información recopilada por {{TEAM_NAME}}, por lo tanto no reemplaza otras plataformas de verificación."
+    }
+  ],
+  "form": {
+    "title": "¿Estoy expuesto?",
+    "placeholder": "Ingresar email o usuario de un sistema de {{ORGANIZATION_NAME}}",
+    "button": "Comprobar si estoy expuesto"
+  },
+  "results": {
+    "loading": "Buscando...",
+    "captchaRequired": "Por favor, completa el captcha para continuar.",
+    "noLeaks": "¡No se encontraron filtraciones para el usuario ingresado!",
+    "user": "Usuario:",
+    "unknown": "Desconocido",
+    "password": "Contraseña:",
+    "detectedIn": "Detectado en",
+    "site": "sitio",
+    "sites": "sitios distintos",
+    "warningHTML": "⚠️ Te recomendamos cambiar estas contraseñas en todos los sitios donde las uses por una diferente si aún no lo has hecho. Para más información revisar <a href=\"#faq-filtracion\" style=\"color:#856404; text-decoration:underline;\">nuestras recomendaciones</a>.",
+    "errorBackend": "Error consultando el backend."
+  }
+}
