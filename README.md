@@ -12,10 +12,12 @@ Leaks Checker is a service that allows you to verify if an email or username fro
 
 ```
 /
-├── backend/      # FastAPI backend API
-├── frontend/     # Web frontend (HTML, CSS, JS)
-├── .env.example  # Example environment variables
-├── docker-compose.yml
+├── .env.example        # Example environment variables
+├── backend             # FastAPI backend API
+├── docker-compose.yml  # Service orchestration for local deployment
+├── frontend            # Web frontend (HTML, CSS, JS)
+├── LICENSE             # Project license text
+└── README.md           # Project overview and setup instructions
 ```
 
 ---
@@ -25,8 +27,8 @@ Leaks Checker is a service that allows you to verify if an email or username fro
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your_user/your_repository.git
-cd your_repository
+git clone https://github.com/CERTUNLP/leaks-checker.git
+cd leaks-checker
 ```
 
 ### 2. Configure environment variables
