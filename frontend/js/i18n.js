@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     // 6. Render FAQ
     const faqContainer = document.getElementById('faq-container');
     faqContainer.innerHTML = texts.faq.map(item => `
-      <details class="faq-item">
+      <details class="faq-item"${item.key === "user-in-leak" ? ' id="faq-filtracion"' : ''}>
         <summary><strong>${item.q}</strong></summary>
         <div>${item.a}</div>
       </details>

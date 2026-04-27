@@ -23,6 +23,7 @@
       "a": "To use {{APP_NAME}}, simply enter your email address or username belonging to a {{ORGANIZATION_NAME}} system in the search field and complete the reCAPTCHA. Then click \"Check if I am exposed\" to verify whether your data has been leaked.<br> We also recommend using this tool periodically, at least once a month, since new leaks are added as they are detected."
     },
     {
+      "key": "user-in-leak",
       "q": "What should I do if I find my username in a leak?",
       "a": "If you identify that your data has been leaked, we recommend:<ol><li>Change leaked passwords.</li><li>Verify that the security details on your accounts have not been modified and enable two-step verification if it is not already active.</li><li>Check the devices you usually connect from for malware (malicious software), since in cases of \"info stealers\" (malware that steals information), credential theft occurs on the user's devices.</li><li>Do not save passwords in the browser.</li></ol>Remember that historical leaks may appear from systems where you have already changed your password, and in that case there is no need to worry."
     },

@@ -23,6 +23,7 @@
       "a": "Para utilizar {{APP_NAME}}, simplemente ingresa tu dirección de correo electrónico o nombre de usuario, perteneciente a un sistema de {{ORGANIZATION_NAME}}, en el campo de búsqueda y completa el reCAPTCHA. Luego, haz clic en \"Comprobar si estoy expuesto\" para verificar si tus datos han sido filtrados.<br> También recomendamos usar esta herramienta periódicamente, al menos una vez al mes, ya que se van incorporando nuevas filtraciones a medida que se detectan."
     },
     {
+      "key": "user-in-leak",
       "q": "¿Qué hago si encuentro mi usuario en una filtración?",
       "a": "Si identificas que tus datos fueron filtrados, te recomendamos:<ol><li>Cambiar contraseñas filtradas</li><li>Verificar que los datos de seguridad en tus cuentas no hayan sido modificados y activar la verificación en dos pasos si no se encuentra activo.</li><li>Revisar los dispositivos desde los que te solés conectar en busca de malware (software malicioso), ya que en casos de \"info stealers\" (malware que roba información) los robos de credenciales se producen en los dispositivos del usuario.</li><li>No guardar las claves en el navegador. </li></ol>Recorda que pueden aparecer filtraciones históricas de sistemas donde ya hayas cambiado la contraseña y, en ese caso, no hay que preocuparse."
     },
