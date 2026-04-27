@@ -49,6 +49,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     document.getElementById('query').setAttribute('placeholder', texts.form.placeholder);
     document.getElementById('t-form-btn').textContent = texts.form.button;
 
+    document.getElementById('user-help-popup').innerHTML = texts.form.userHelp;
+
     // 6. Render FAQ
     const faqContainer = document.getElementById('faq-container');
     faqContainer.innerHTML = texts.faq.map(item => `
@@ -123,6 +125,25 @@ document.addEventListener("DOMContentLoaded", async () => {
       scriptRecaptcha.defer = true;
       document.head.appendChild(scriptRecaptcha);
     }
+
+    const helpIcon = document.getElementById('user-help-icon');
+    const helpPopup = document.getElementById('user-help-popup');
+
+    helpIcon.addEventListener('click', function(e) {
+      e.stopPropagation(); 
+      if (helpPopup.style.display === 'block') {
+        helpPopup.style.display = 'none';
+      } else {
+        helpPopup.style.display = 'block';
+      }
+    });
+
+    // Closes the popup if you click outside of it
+    document.addEventListener('click', function(e) {
+      if (helpPopup.style.display === 'block' && !helpIcon.contains(e.target)) {
+        helpPopup.style.display = 'none';
+      }
+    });
 
   } catch (error) {
     console.error("Error loading application parameters:", error);

@@ -51,12 +51,14 @@
   "form": {
     "title": "¿Estoy expuesto?",
     "placeholder": "Ingresar email o usuario de un sistema de {{ORGANIZATION_NAME}}",
-    "button": "Comprobar si estoy expuesto"
+    "button": "Comprobar si estoy expuesto",
+    "userLabel": "Nombre de usuario",
+    "userHelp": "El nombre de usuario es el identificador único que usás para ingresar a cada sistema de la {{ORGANIZATION_NAME}}. <br><br> Puede ser tu email personal o institucional, un alias elegido por vos o asignado por el sistema (como por ej. \"jperez\" o \"juan.perez\"), o tu número de documento."
   },
   "results": {
     "loading": "Buscando...",
     "captchaRequired": "Por favor, completa el captcha para continuar.",
-    "noLeaks": "¡No se encontraron filtraciones para el usuario ingresado!",
+    "noLeaks": "¡No se encontró el usuario ingresado en una filtración relacionada a la {{ORGANIZATION_NAME}}!",
     "user": "Usuario:",
     "unknown": "Desconocido",
     "password": "Contraseña:",

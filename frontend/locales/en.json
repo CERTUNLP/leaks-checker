@@ -51,12 +51,14 @@
   "form": {
     "title": "Am I exposed?",
     "placeholder": "Enter email or username from a {{ORGANIZATION_NAME}} system",
-    "button": "Check if I am exposed"
+    "button": "Check if I am exposed",
+    "userLabel": "Username",
+    "userHelp": "The username is the unique identifier you use to log in to each {{ORGANIZATION_NAME}} system. <br><br> It can be your personal or institutional email, an alias chosen by you or assigned by the system (such as \"jperez\" or \"juan.perez\"), or your ID number."
   },
   "results": {
     "loading": "Searching...",
     "captchaRequired": "Please complete the captcha to continue.",
-    "noLeaks": "No leaks were found for the entered user!",
+    "noLeaks": "The entered user was not found in any leak related to {{ORGANIZATION_NAME}}!",
     "user": "User:",
     "unknown": "Unknown",
     "password": "Password:",
