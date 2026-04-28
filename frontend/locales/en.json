@@ -10,7 +10,7 @@
   },
   "info": {
     "whatIsTitle": "What is {{APP_NAME}}?",
-    "whatIsText": "{{APP_NAME}} is a service by {{TEAM_NAME}} to verify whether an email address or username belonging to systems of {{ORGANIZATION_NAME}} has appeared in leaks published on Telegram or other sources on the Internet.<br><br>Through this development, we analyze the information and store it securely and confidentially. Our database is designed so that, even if a leak has not been confirmed, using this tool does not represent a risk to individuals.",
+    "whatIsText": "{{APP_NAME}} is a service by {{TEAM_NAME}} to verify whether an username belonging to systems of {{ORGANIZATION_NAME}} has appeared in leaks published on Telegram or other sources on the Internet.<br><br>Through this development, we analyze the information and store it securely and confidentially. Our database is designed so that, even if a leak has not been confirmed, using this tool does not represent a risk to individuals.",
     "faqTitle": "Frequently Asked Questions"
   },
   "faq": [
@@ -50,7 +50,7 @@
   ],
   "form": {
     "title": "Am I exposed?",
-    "placeholder": "Enter email or username from a {{ORGANIZATION_NAME}} system",
+    "placeholder": "Enter username from a {{ORGANIZATION_NAME}} system",
     "button": "Check if I am exposed",
     "userLabel": "Username",
     "userHelp": "The username is the unique identifier you use to log in to each {{ORGANIZATION_NAME}} system. <br><br> It can be your personal or institutional email, an alias chosen by you or assigned by the system (such as \"jperez\" or \"juan.perez\"), or your ID number."

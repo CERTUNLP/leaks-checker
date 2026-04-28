@@ -10,7 +10,7 @@
   },
   "info": {
     "whatIsTitle": "¿Qué es {{APP_NAME}}?",
-    "whatIsText": "{{APP_NAME}} es un servicio de {{TEAM_NAME}} para verificar si un email o usuario perteneciente a sistemas de {{ORGANIZATION_NAME}} ha aparecido en filtraciones publicadas en Telegram u otras fuentes en Internet.<br><br>Mediante este desarrollo analizamos la información y la almacenamos de forma segura y confidencial. Nuestra base de datos está diseñada para que, incluso en el caso de que no se haya corroborado una filtración, el uso de esta herramienta no represente un riesgo para las personas.",
+    "whatIsText": "{{APP_NAME}} es un servicio de {{TEAM_NAME}} para verificar si un nombre de usuario perteneciente a sistemas de {{ORGANIZATION_NAME}} ha aparecido en filtraciones publicadas en Telegram u otras fuentes en Internet.<br><br>Mediante este desarrollo analizamos la información y la almacenamos de forma segura y confidencial. Nuestra base de datos está diseñada para que, incluso en el caso de que no se haya corroborado una filtración, el uso de esta herramienta no represente un riesgo para las personas.",
     "faqTitle": "Preguntas Frecuentes"
   },
   "faq": [
@@ -50,7 +50,7 @@
   ],
   "form": {
     "title": "¿Estoy expuesto?",
-    "placeholder": "Ingresar email o usuario de un sistema de {{ORGANIZATION_NAME}}",
+    "placeholder": "Ingresar usuario de un sistema de {{ORGANIZATION_NAME}}",
     "button": "Comprobar si estoy expuesto",
     "userLabel": "Nombre de usuario",
     "userHelp": "El nombre de usuario es el identificador único que usás para ingresar a cada sistema de la {{ORGANIZATION_NAME}}. <br><br> Puede ser tu email personal o institucional, un alias elegido por vos o asignado por el sistema (como por ej. \"jperez\" o \"juan.perez\"), o tu número de documento."
